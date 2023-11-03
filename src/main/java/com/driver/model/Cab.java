@@ -9,7 +9,7 @@ public class Cab{
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer cabId;
     private int perKmRate;
-    private boolean availAble;
+    private boolean available;
     @OneToOne
     @JoinColumn
     private Driver driver;
@@ -19,7 +19,7 @@ public class Cab{
 
     public Cab(int perKmRate, boolean availAble) {
         this.perKmRate = perKmRate;
-        this.availAble = availAble;
+        this.available = availAble;
     }
     public Integer getId() {
         return cabId;
@@ -36,12 +36,12 @@ public class Cab{
         this.perKmRate = perKmRate;
     }
 
-    public boolean getAvailAble() {
-        return availAble;
+    public boolean getAvailable() {
+        return available;
     }
 
-    public void setAvailAble(boolean availAble) {
-        this.availAble = availAble;
+    public void setAvailable(boolean available) {
+        this.available = available;
     }
 
     public Driver getDriver() {
