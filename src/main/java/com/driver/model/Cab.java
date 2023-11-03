@@ -21,10 +21,10 @@ public class Cab{
         this.perKmRate = perKmRate;
         this.availAble = availAble;
     }
-    public Integer getCabId() {
+    public Integer getId() {
         return cabId;
     }
-    public void setCabId(Integer cabId) {
+    public void setId(Integer cabId) {
         this.cabId = cabId;
     }
 
@@ -36,7 +36,7 @@ public class Cab{
         this.perKmRate = perKmRate;
     }
 
-    public boolean isAvailAble() {
+    public boolean getAvailAble() {
         return availAble;
     }
 

@@ -1,7 +1,5 @@
 package com.driver.model;
 
-import io.swagger.models.auth.In;
-
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -12,13 +10,13 @@ public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer customerId;
-    private String mobNo;
+    private String mobile;
     private String password;
     @OneToMany(mappedBy = "customer" , cascade = CascadeType.ALL)
     private List<TripBooking> tripBookingList = new ArrayList<>();
 
     public Customer(String mobNo, String password) {
-        this.mobNo = mobNo;
+        this.mobile = mobNo;
         this.password = password;
     }
 
@@ -33,12 +31,12 @@ public class Customer {
         this.customerId = customerId;
     }
 
-    public String getMobNo() {
-        return mobNo;
+    public String getMobile() {
+        return mobile;
     }
 
-    public void setMobNo(String mobNo) {
-        this.mobNo = mobNo;
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
     }
 
     public String getPassword() {
